@@ -1,0 +1,7 @@
+neobundle.vim
+neocomplcache
+unite.vim
+vim-powerline
+vimfiler
+vimproc
+vimshell
