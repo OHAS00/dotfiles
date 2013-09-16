@@ -16,7 +16,12 @@ NeoBundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
 "---------------------------------------------
+
+"vim-powerline settings
 let g:Powerline_symbols="fancy"
+
+"vi互換
+set nocompatible
 
 "############################
 " 表示系
@@ -77,6 +82,7 @@ set t_vb=
 
 " 全モードでマウスを有効化
 set mouse=a
+set ttymouse=xterm2
 
 " キーコードはすぐにタイムアウト。マッピングはタイムアウトしない
 set notimeout ttimeout ttimeoutlen=200
@@ -99,3 +105,6 @@ set encoding=utf-8
 
 "256色表示"
 set t_Co=256
+
+"自動改行オフ
+set tw=0
