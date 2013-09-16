@@ -4,3 +4,4 @@ for file in `find $HOME/dotfiles -name '.*' | grep -v 'dotfiles/.git$' | perl -n
     ln -s $HOME/dotfiles/$file $HOME/$file
 done
 
+cp -a mytheme.sh ./tmux-powerline/themes/
