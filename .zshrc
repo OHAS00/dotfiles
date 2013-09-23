@@ -50,4 +50,3 @@ export LANG='ja_JP.UTF-8'
 alias tmux='tmux -2'
 PROMPT="$PROMPT"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 export EDITOR=/usr/bin/vim
-alias emerge='emerge --quiet-build y'
