@@ -108,3 +108,6 @@ set t_Co=256
 
 "自動改行オフ
 set tw=0
+
+"ファイルエンコーディング設定
+set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
