@@ -1,4 +1,4 @@
-﻿"############################
+"############################
 " 表示系
 "############################
 
@@ -30,7 +30,7 @@ set ignorecase " 検索文字列が小文字の場合は大文字小文字を区
 set smartcase " 検索文字列に大文字が含まれている場合は区別して検索する
 set wrapscan " 検索時に最後まで行ったら最初に戻る
 set noincsearch " 検索文字列入力時に順次対象文字列にヒットさせない
-set hlsearch " 検索語を強調表示(<C-L>を押すと現在の強調表示を解除する) 
+set hlsearch " 検索語を強調表示(<C-L>を押すと現在の強調表示を解除する)
 
 " ファイル名と内容によってファイルタイプを判別し、ファイルタイププラグインを有効にする
 filetype indent plugin on
@@ -40,6 +40,9 @@ set hidden
 
 " コマンドライン補完を便利に
 set wildmenu
+
+" コマンドラインの高さ
+set cmdheight=2
 
 " オートインデント、改行、インサートモード開始直後にバックスペースキーで
 " 削除できるようにする
@@ -60,9 +63,6 @@ set t_vb=
 
 " 全モードでマウスを有効化
 set mouse=a
-
-" コマンドラインの高さを2行に
-set cmdheight=2
 
 " キーコードはすぐにタイムアウト。マッピングはタイムアウトしない
 set notimeout ttimeout ttimeoutlen=200
@@ -85,7 +85,17 @@ colorscheme solarized
 
 "背景をダーク♂に
 set background=dark
+"set background=light
 
 "GUIフォント指定
 set guifont=Ricty_Discord_for_Powerline:h12:cSHIFTJIS
 
+set noswapfile " スワップファイルを作成しない
+
+set textwidth=0 " 勝手に改行しない
+
+"gVimでもテキストベースのタブを使う
+"set guioptions-=e
+
+"見えない文字の表示
+set listchars=eol:$,tab:>.
