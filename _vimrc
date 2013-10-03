@@ -29,7 +29,7 @@ set guioptions-=b "下スクロールバーなし
 set clipboard+=unnamed
 
 " 勝手に改行させない
-set textwidth
+set textwidth=0
 
 "neocomplcache設定
 
