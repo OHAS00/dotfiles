@@ -92,8 +92,6 @@ set guifont=Ricty_Discord_for_Powerline:h12:cSHIFTJIS
 
 set noswapfile " スワップファイルを作成しない
 
-set textwidth=0 " 勝手に改行しない
-
 "gVimでもテキストベースのタブを使う
 "set guioptions-=e
 

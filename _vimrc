@@ -28,6 +28,9 @@ set guioptions-=b "下スクロールバーなし
 " 無名レジスタに入るデータを、*レジスタにも入れる。
 set clipboard+=unnamed
 
+" 勝手に改行させない
+set textwidth
+
 "neocomplcache設定
 
 " Disable AutoComplPop.
@@ -62,3 +65,29 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
+"------------------------------------
+" Open & Reload .vimrc
+"------------------------------------"{{{
+set foldmethod=expr
+set modeline
+command! Evimrc  e $MYVIMRC
+
+augroup source-vimrc
+  autocmd!
+  autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
+  autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
+augroup END
+
+"}}}
+
+"------------------------------------
+" Lokaltog/vim-easymotion
+"------------------------------------"{{{
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionShade  Comment
+"}}}
+
+
+"------------------------------------
+"vim: foldmethod=marker
