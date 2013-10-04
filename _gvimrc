@@ -97,3 +97,6 @@ set noswapfile " スワップファイルを作成しない
 
 "見えない文字の表示
 set listchars=eol:$,tab:>.
+
+" 勝手に改行させない
+set textwidth=0
