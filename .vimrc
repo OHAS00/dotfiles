@@ -14,6 +14,9 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'vim-scripts/YankRing.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'vim-scripts/Changed'
 
 filetype plugin indent on
 "---------------------------------------------
@@ -113,7 +116,14 @@ set tw=0
 "ファイルエンコーディング設定
 set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 
+"emmet-vim の設定
+let g:user_emmet_settings = {
+\   'lang' : 'ja'
+\ }
+
+"------------------------------------
 "neocomplcache設定
+"------------------------------------"{{{
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -147,3 +157,19 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
+"}}}
+
+"------------------------------------
+" Open & Reload .vimrc
+"------------------------------------"{{{
+set foldmethod=expr
+set modeline
+command! Evimrc  e $MYVIMRC
+
+augroup source-vimrc
+  autocmd!
+  autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
+  autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
+augroup END
+
+"}}}
