@@ -121,6 +121,9 @@ let g:user_emmet_settings = {
 \   'lang' : 'ja'
 \ }
 
+"NERDtreeをF9で呼ぶ
+nmap <F9> :NERDTreeToggle<Enter>
+
 "------------------------------------
 "neocomplcache設定
 "------------------------------------"{{{
