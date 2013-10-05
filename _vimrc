@@ -14,6 +14,7 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'mkitt/tabline.vim'
+NeoBundle 'mattn/emmet-vim'
 
 filetype plugin indent on
 "---------------------------------------------
