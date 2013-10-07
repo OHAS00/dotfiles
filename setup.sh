@@ -4,6 +4,5 @@ for file in `find $HOME/dotfiles -name '.*' | grep -v 'dotfiles/.git$' | perl -n
     ln -fs $HOME/dotfiles/$file $HOME/$file
 done
 
-cp -af mytheme.sh ./tmux-powerline/themes/
 rm ../.gitignore
 rm ../.gitmodules

@@ -15,6 +15,9 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'mkitt/tabline.vim'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'vim-scripts/YankRing.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'vim-scripts/Changed'
 
 filetype plugin indent on
 "---------------------------------------------
@@ -31,6 +34,14 @@ set clipboard+=unnamed
 
 " 勝手に改行させない
 set textwidth=0
+
+"emmet-vim の設定
+let g:user_emmet_settings = {
+\   'lang' : 'ja'
+\ }
+
+"NERDtreeをF9で呼ぶ
+nmap <F9> :NERDTreeToggle<Enter>
 
 "neocomplcache設定
 
