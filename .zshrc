@@ -45,8 +45,5 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/bin:/usr/bin
-export LANG='ja_JP.UTF-8'
 alias tmux='tmux -2u'
 PROMPT="$PROMPT"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-export EDITOR=/usr/bin/vim
