@@ -46,4 +46,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias tmux='tmux -2u'
-PROMPT="$PROMPT"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
