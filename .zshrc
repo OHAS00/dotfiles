@@ -47,14 +47,32 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # tmux settings
-alias tmux='tmux -2u'
+if [ `which tmux` ]
+then
+
+else
+    alias tmux='tmux -2u'
+fi
 
 # screenfetch settings
-SCREENFETCH=`which screenfetch`
-if [ $SCREENFETCH = "screenfetch not found" ]
+if [ `which screenfetch` ]
 then
 
 else
     screenfetch
 fi
 source ~/dotfiles/tmuxinator/tmuxinator.zsh
+
+# golang settings
+if [ `which go` ]
+then
+
+else
+    if [ -e /usr/go ]
+    then
+        export GOPATH=/usr/go
+    else
+        mkdir /usr/go
+        export GOPATH=/usr/go
+    fi
+fi
