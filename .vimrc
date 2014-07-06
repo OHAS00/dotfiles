@@ -24,108 +24,107 @@ filetype plugin indent on
 "vim-powerline settings
 let g:Powerline_symbols="fancy"
 
-"vi�ߴ�
+"vi互換
 set nocompatible
 
 "############################
-" ɽ����
+" 表示系
 "############################
 
-set number " ���ֹ�ɽ��
-set showmode " �⡼��ɽ��
-set title " �Խ���Υե�����̾��ɽ��
-set ruler " �롼�顼��ɽ��
-set showcmd " ������Υ��ޥ�ɤ򥹥ơ�������ɽ������
-set showmatch " ������ϻ����б������̤�ɽ��
-set laststatus=2 " ���ơ������饤�����ɽ��
+set number " 行番号表示
+set showmode " モード表示
+set title " 編集中のファイル名を表示
+set ruler " ルーラーの表示
+set showcmd " 入力中のコマンドをステータスに表示する
+set showmatch " 括弧入力時の対応する括弧を表示
+set laststatus=2 " ステータスラインを常に表示
 
 "############################
-" �ץ�����ߥ󥰥إ�׷�
+" プログラミングヘルプ系
 "############################
 
-syntax on " ���顼ɽ��
-set smartindent " �����ȥ���ǥ��
+syntax on " カラー表示
+set smartindent " オートインデント
 
-" tab��Ϣ
+" tab関連
 
-set expandtab " ���֤�����˶���ʸ������
-set ts=4 sw=4 sts=0 " ���֤�Ⱦ��4ʸ��ʬ�Υ��ڡ���
+set expandtab " タブの代わりに空白文字挿入
+set ts=4 sw=4 sts=0 " タブは半角4文字分のスペース
 
 "###########################
-" ������
+" 検索系
 "###########################
 
-set ignorecase " ����ʸ���󤬾�ʸ���ξ�����ʸ����ʸ������̤ʤ���������
-set smartcase " ����ʸ�������ʸ�����ޤޤ�Ƥ�����϶��̤��Ƹ�������
-set wrapscan " �������˺Ǹ�ޤǹԤä���ǽ�����
-set noincsearch " ����ʸ�������ϻ��˽缡�о�ʸ����˥ҥåȤ����ʤ�
-set hlsearch " �������Ĵɽ��(<C-L>�򲡤��ȸ��ߤζ�Ĵɽ����������) 
+set ignorecase " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
+set smartcase " 検索文字列に大文字が含まれている場合は区別して検索する
+set wrapscan " 検索時に最後まで行ったら最初に戻る
+set noincsearch " 検索文字列入力時に順次対象文字列にヒットさせない
+set hlsearch " 検索語を強調表示(<C-L>を押すと現在の強調表示を解除する) 
 
-" �Хåե�����¸���ʤ��Ƥ�¾�ΥХåե���ɽ���Ǥ���褦�ˤ���
+" バッファを保存しなくても他のバッファを表示できるようにする
 set hidden
 
-" ���ޥ�ɥ饤���䴰��������
+" コマンドライン補完を便利に
 set wildmenu
 
-" �����ȥ���ǥ�ȡ����ԡ����󥵡��ȥ⡼�ɳ���ľ��˥Хå����ڡ���������
-" ����Ǥ���褦�ˤ���
+" オートインデント、改行、インサートモード開始直後にバックスペースキーで
+" 削除できるようにする
 set backspace=indent,eol,start
 
-" ��ư���ޥ�ɤ�Ȥä��Ȥ�����Ƭ�˰�ư���ʤ�
+" 移動コマンドを使ったとき、行頭に移動しない
 set nostartofline
 
-" �Хåե����ѹ�����Ƥ���Ȥ������ޥ�ɤ򥨥顼�ˤ���ΤǤʤ�����¸���뤫
-" �ɤ�����ǧ�����
+" バッファが変更されているとき、コマンドをエラーにするのでなく、保存するか
+" どうか確認を求める
 set confirm
 
-" �ӡ��פ�����˥ӥ��奢��٥�(���̥ե�å���)��Ȥ�
+" ビープの代わりにビジュアルベル(画面フラッシュ)を使う
 set visualbell
 
-" �����ƥӥ��奢��٥��̵��������
+" そしてビジュアルベルも無効化する
 set t_vb=
 
-" ���⡼�ɤǥޥ�����ͭ����
+" 全モードでマウスを有効化
 set mouse=a
 set ttymouse=xterm2
 
-" ���������ɤϤ����˥����ॢ���ȡ��ޥåԥ󥰤ϥ����ॢ���Ȥ��ʤ�
+" キーコードはすぐにタイムアウト。マッピングはタイムアウトしない
 set notimeout ttimeout ttimeoutlen=200
 
-" <F11>������'paste'��'nopaste'���ڤ��ؤ���
+" <F11>キーで'paste'と'nopaste'を切り替える
 set pastetoggle=<F11>
 
-" <C-L>�Ǹ�����ζ�Ĵɽ����������
+" <C-L>で検索語の強調表示を解除する
 nnoremap <C-L> :nohl<CR><C-L>
 
-"�Хå����åץե������������ʤ�"
+"バックアップファイルを作成しない"
 set nobackup
 
-"PHPʸˡ�����å�"
+"PHP文法チェック"
 autocmd filetype php :set makeprg=php\ -l\ %
 autocmd filetype php :set errorformat=%m\ in\ &f\ on\ line\ %l
 
-"utf8����"
-set encoding=utf-8
-
-"256��ɽ��"
+"256色表示"
 set t_Co=256
 
-"��ư���ԥ���
+"自動改行オフ
 set tw=0
 
-"�ե����륨�󥳡��ǥ�������
-set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
+"ファイルエンコーディング設定
+set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,default,latin
+set fileencoding=utf-8
+set encoding=utf-8
 
-"emmet-vim ������
+"emmet-vim の設定
 let g:user_emmet_settings = {
 \   'lang' : 'ja'
 \ }
 
-"NERDtree��F9�ǸƤ�
+"NERDtreeをF9で呼ぶ
 nmap <F9> :NERDTreeToggle<Enter>
 
 "------------------------------------
-"neocomplcache����
+"neocomplcache設定
 "------------------------------------"{{{
 
 " Disable AutoComplPop.
