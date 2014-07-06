@@ -4,5 +4,7 @@ for file in `find $HOME/dotfiles -name '.*' | grep -v 'dotfiles/.git$' | perl -n
     ln -fs $HOME/dotfiles/$file $HOME/$file
 done
 
+ln -fs $HOME/dotfiles/tmuxinator $HOME/.tmuxinator
+
 rm ../.gitignore
 rm ../.gitmodules

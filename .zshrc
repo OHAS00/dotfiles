@@ -57,3 +57,4 @@ then
 else
     screenfetch
 fi
+source ~/dotfiles/tmuxinator/tmuxinator.zsh
