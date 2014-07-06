@@ -71,6 +71,21 @@ else
         export GOPATH=$HOME/go
         export PATH="$PATH":$HOME/go/bin
     fi
+
+    # peco autoinstall
+    if [ `type peco >/dev/null 2>&1` ]
+    then
+
+    else
+        if [ `type git >/dev/null 2>&1` ]
+        then
+
+        else
+            echo "peco autoinstalling..."
+            go get github.com/peco/peco/cmd/peco
+            echo "peco autoinstall finished!!"
+        fi
+    fi
 fi
 
 # tmuxinator settings
