@@ -45,4 +45,15 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# tmux settings
 alias tmux='tmux -2u'
+
+# screenfetch settings
+SCREENFETCH=`which screenfetch`
+if [ $SCREENFETCH = "screenfetch not found" ]
+then
+
+else
+    screenfetch
+fi
