@@ -65,7 +65,6 @@ else
     if [ -e $HOME/go ]
     then
         export GOPATH=$HOME/go
-        export PATH="$PATH":$HOME/go/bin
     else
         mkdir $HOME/go
         export GOPATH=$HOME/go
@@ -73,7 +72,7 @@ else
     fi
 
     # peco autoinstall
-    if [ `type peco >/dev/null 2>&1` ]
+    if [ -e $GOPATH/bin/peco ]
     then
 
     else
@@ -90,3 +89,8 @@ fi
 
 # tmuxinator settings
 source ~/dotfiles/tmuxinator/tmuxinator.zsh
+
+# path change functions
+path_append ()  { path_remove $1; export PATH="$PATH:$1"; }
+path_prepend () { path_remove $1; export PATH="$1:$PATH"; }
+path_remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`; }
