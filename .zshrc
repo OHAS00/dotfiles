@@ -49,44 +49,6 @@ source $ZSH/oh-my-zsh.sh
 # tmux settings
 alias tmux='tmux -2u'
 
-# screenfetch settings
-if [ `type screenfetch >/dev/null 2>&1` ]
-then
-
-else
-    screenfetch
-fi
-
-# golang settings
-if [ `type go >/dev/null 2>&1` ]
-then
-
-else
-    if [ -e $HOME/go ]
-    then
-        export GOPATH=$HOME/go
-    else
-        mkdir $HOME/go
-        export GOPATH=$HOME/go
-        export PATH="$PATH":$HOME/go/bin
-    fi
-
-    # peco autoinstall
-    if [ -e $GOPATH/bin/peco ]
-    then
-
-    else
-        if [ `type git >/dev/null 2>&1` ]
-        then
-
-        else
-            echo "peco autoinstalling..."
-            go get github.com/peco/peco/cmd/peco
-            echo "peco autoinstall finished!!"
-        fi
-    fi
-fi
-
 # tmuxinator settings
 source ~/dotfiles/tmuxinator/tmuxinator.zsh
 
