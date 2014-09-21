@@ -100,10 +100,6 @@ nnoremap <C-L> :nohl<CR><C-L>
 "バックアップファイルを作成しない"
 set nobackup
 
-"PHP文法チェック"
-autocmd filetype php :set makeprg=php\ -l\ %
-autocmd filetype php :set errorformat=%m\ in\ &f\ on\ line\ %l
-
 "256色表示"
 set t_Co=256
 
