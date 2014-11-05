@@ -17,6 +17,7 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-scripts/Changed'
+NeoBundle 'vim-scripts/diffchar.vim'
 
 filetype plugin indent on
 "---------------------------------------------
