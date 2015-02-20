@@ -18,6 +18,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-scripts/Changed'
 NeoBundle 'vim-scripts/diffchar.vim'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'vim-scripts/sudo.vim'
 
 filetype plugin indent on
 "---------------------------------------------
