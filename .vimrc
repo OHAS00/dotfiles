@@ -23,7 +23,7 @@ filetype plugin indent on
 "---------------------------------------------
 
 "vim-powerline settings
-let g:Powerline_symbols="fancy"
+"let g:Powerline_symbols="fancy" " 一時的にOFF(Powerline対応フォントが必要なため)
 
 "vi互換
 set nocompatible
