@@ -12,18 +12,20 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimproc'
-NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-scripts/Changed'
 NeoBundle 'vim-scripts/diffchar.vim'
+NeoBundle 'itchyny/lightline.vim'
 
 filetype plugin indent on
 "---------------------------------------------
 
-"vim-powerline settings
-"let g:Powerline_symbols="fancy" " 一時的にOFF(Powerline対応フォントが必要なため)
+" lightline settings
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 "vi互換
 set nocompatible
