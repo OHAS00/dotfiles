@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
-for file in `find $HOME/dotfiles -name '.*' | grep -v 'dotfiles/.git$' | perl -nle 'm!dotfiles/(.+)$! and print $1'`; do
-    ln -fs $HOME/dotfiles/$file $HOME/$file
-done
-
+ln -fs $HOME/dotfiles/.vimrc $HOME/.vimrc
+ln -fs $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -fs $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -fs $HOME/dotfiles/tmuxinator $HOME/.tmuxinator
 
-rm ../.gitignore
-rm ../.gitmodules
+rm -f $HOME/dotfiles/tmuxinator/tmuxinator
+
+vim +":NeoBundleClean" +:q
+vim +":NeoBundleInstall" +:q
