@@ -46,9 +46,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-# tmux settings
-alias tmux='tmux -2u'
-
 # tmuxinator settings
 source ~/dotfiles/tmuxinator/tmuxinator.zsh
 
