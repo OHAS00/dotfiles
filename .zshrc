@@ -56,3 +56,6 @@ path_remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'
 
 # SUDO_EDITOR settings
 SUDO_EDITOR=vim
+
+# aliases
+alias tmux='tmux -2u'
