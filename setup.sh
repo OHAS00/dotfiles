@@ -9,5 +9,8 @@ ln -fs $HOME/dotfiles/tmuxinator $HOME/.tmuxinator
 
 rm -f $HOME/dotfiles/tmuxinator/tmuxinator
 
-vim +":NeoBundleClean" +:q
-vim +":NeoBundleInstall" +:q
+vim +":NeoBundleClean" +:q >> /dev/tty
+vim +":NeoBundleInstall" +:q >> /dev/tty
+
+cd ~/dotfiles/vim/bundle/vimproc
+make -f make_unix.mak
